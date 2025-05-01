@@ -49,8 +49,8 @@
         <input type="text" name="firstname" id="firstname" placeholder="Enter first name" required>
         <div class="invalid-feedback" id="first-feedback"></div><br>
 
-        <label for="lastname">Last Name</label>
-        <input type="text" name="lastname" id="lastname" placeholder="Enter last name" required>
+        <label for="lastname">Middle Name</label>
+        <input type="text" name="lastname" id="lastname" placeholder="Enter middle name" required>
         <div class="invalid-feedback" id="lastname-feedback"></div><br>
 
         <label for="surname">Surname</label>
@@ -66,8 +66,12 @@
         <div class="invalid-feedback" id="email-feedback"></div><br>
 
         <label for="dobInput">Date of birth</label>
-        <input type="date" name="dob" id="dobInput" placeholder="Enter date of birth" required>
+        <input type="date" name="dob" id="dob" placeholder="Enter date of birth" required>
         <div class="invalid-feedback" id="dobValidation"></div><br>
+
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" placeholder="Age" readonly>
+        <div class="invalid-feedback" id="ageValidation"></div><br>
         
         <label for="genderInput">Gender</label>
         <select name="gender" id="genderInput" required>
@@ -108,6 +112,7 @@
   <p>&copy; Mutinda Stacey Nduku || SCS3/145886/2023</p>
 </footer>
 <script src="../js/counties.js"></script>
+<script src="../js/script.js"></script>
 
 
 </body>
