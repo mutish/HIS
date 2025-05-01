@@ -2,9 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Wards ~Afya Hospital</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/registration.css">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-$END$
+  <header>
+    <h1>Afya Hospital</h1>
+    <p>Your health, Our priority</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../html/index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Register</a>
+        <ul class="dropdown-menu">
+          <li><a href="../html/register_patient.html">Patient</a></li>
+          <li><a href="../html/register_kin.html">Next of Kin</a></li>
+          <li><a href="../html/register_doctor.html">Doctor</a></li>
+          <li><a href="../html/wards.html">New Ward</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Records</a>
+        <ul class="dropdown-menu">
+          <li><a href="../php/patient_records.php">Patient</a></li>
+          <li><a href="../php/kin_records.php">Next of Kin</a></li>
+          <li><a href="../php/doctor_records.php">Doctor</a></li>
+          <li><a href="../php/ward_records.php">Wards</a></li>
+        </ul>
+      </li>
+      <li><a href="../html/about.html">About us</a></li>
+      <li><a href="../html/contacts.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <form action="../php/new_ward.php" method="POST" class="needs-validation" id="patientRegistrationForm" novalidate>
+      <legend id="form-header">Doctor Info</legend>
+      <label for="ward-name">Name</label>
+      <input type="text" name="name" id="ward-name" placeholder="Enter ward name" required><br>
+  
+      <label for="ward-capacity">Capacity</label>
+      <input type="number" name="capacity" id="ward-capacity" placeholder="Enter first name" required><br>
+  
+      <label for="ward-department">Department</label>
+      <input type="text" name="department" id="ward-department" placeholder="Enter last name" required><br>
+
+        <div class="row align-items-center">
+            <div class="col-6">
+                <button class="button" type="submit" id="formSubmit">Add</button>
+            </div>
+            <div class="col-6">
+                <button class="button" type="reset" id="formReset">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<footer>
+  <p>&copy; Mutinda Stacey Nduku || SCS3/145886/2023</p>
+</footer>
 </body>
 </html>
+

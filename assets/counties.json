@@ -1,0 +1,96 @@
+[
+    {
+        "county_code": "1", "county": "Mombasa"},
+    {
+        "county_code": "2", "county": "Kwale"},
+    {
+        "county_code": "3", "county": "Kilifi"},
+    {
+        "county_code": "4", "county": "Tana - River"},
+    {
+        "county_code": "5", "county": "Lamu"},
+    {
+        "county_code": "6", "county": "Taita_Taveta"},
+    {
+        "county_code": "7", "county": "Garissa"},
+    {
+        "county_code": "8", "county": "Wajir"},
+    {
+        "county_code": "9", "county": "Mandera"},
+    {
+        "county_code": "10", "county": "Marsabit"},
+    {
+        "county_code": "11", "county": "Isiolo"},
+    {
+        "county_code": "12", "county": "Meru"},
+    {
+        "county_code": "13", "county": "Tharaka - Nithi"},
+    {
+        "county_code": "14", "county": "Embu"},
+    {
+        "county_code": "15", "county": "Kitui"},
+    {
+        "county_code": "16", "county": "Machakos"},
+    {
+        "county_code": "17", "county": "Makueni"},
+    {
+        "county_code": "18", "county": "Nyandarua"},
+    {
+        "county_code": "19", "county": "Nyeri"},
+    {
+        "county_code": "20", "county": "Kirinyaga"},
+    {
+        "county_code": "21", "county": "Murang'a"},
+    {
+        "county_code": "22", "county": "Kiambu"},
+    {
+        "county_code": "23", "county": "Turkana"},
+    {
+        "county_code": "24", "county": "West - Pokot"},
+    {
+        "county_code": "25", "county": "Samburu"},
+    {
+        "county_code": "26", "county": "Trans - Nzoia"},
+    {
+        "county_code": "27", "county": "Uasin - Gishu"},
+    {
+        "county_code": "28", "county": "Elgeyo - Marakwet"},
+    {
+        "county_code": "29", "county": "Nandi"},
+    {
+        "county_code": "30", "county": "Baringo"},
+    {
+        "county_code": "31", "county": "Laikipia"},
+    {
+        "county_code": "32", "county": "Nakuru"},
+    {
+        "county_code": "33", "county": "Narok"},
+    {
+        "county_code": "34", "county": "Kajiado"},
+    {
+        "county_code": "35", "county": "Kericho"},
+    {
+        "county_code": "36", "county": "Bomet"},
+    {
+        "county_code": "37", "county": "Kakamega"},
+    {
+        "county_code": "38", "county": "Vihiga"},
+    {
+        "county_code": "39", "county": "Bungoma"},
+    {
+        "county_code": "40", "county": "Busia"},
+    {
+        "county_code": "41", "county": "Siaya"},
+    {
+        "county_code": "42", "county": "Kisumu"},
+    {
+        "county_code": "43", "county": "Homa - Bay"},
+    {
+        "county_code": "44", "county": "Migori"},
+    {
+        "county_code": "45", "county": "Kisii"},
+    {
+        "county_code": "46", "county": "Nyamira"},
+    {
+        "county_code": "47", "county": "Nairobi"}
+]

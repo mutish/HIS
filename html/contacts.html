@@ -2,9 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Contact Us</title>
+
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/contacts.css">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-$END$
+  <header>
+    <h1>Afya Hospital</h1>
+    <p>Your health, Our priority</p>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="../html/index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Register</a>
+        <ul class="dropdown-menu">
+          <li><a href="../html/register_patient.html">Patient</a></li>
+          <li><a href="../html/register_kin.html">Next of Kin</a></li>
+          <li><a href="../html/register_doctor.html">Doctor</a></li>
+          <li><a href="../html/wards.html">New Ward</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Records</a>
+        <ul class="dropdown-menu">
+          <li><a href="../php/patient_records.php">Patient</a></li>
+          <li><a href="../php/kin_records.php">Next of Kin</a></li>
+          <li><a href="../php/doctor_records.php">Doctor</a></li>
+          <li><a href="../php/ward_records.php">Wards</a></li>
+        </ul>
+      </li>
+      <li><a href="../html/about.html">About us</a></li>
+      <li><a href="../html/contacts.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h1>Contact Us</h1><hr>
+    <h2>Get in Touch with Afya Hospital</h2><hr>
+    <p>If you have any questions or need assistance, please don't hesitate to contact us. Below you'll find the contact information for various departments within our hospital.</p>
+
+    <h2>Hospital Contact Information</h2><hr>
+    <p>For general inquiries or information, please reach out to our main contact:</p>
+    <ul>
+        <li><strong>Main Hospital Line:</strong> (123) 456-7890</li>
+        <li><strong>Email:</strong> info@afyahospital.ac.ke</li>
+        <li><strong>Address:</strong> Star building 2nd Floor, Moi Avenue. Opposite Naivas</li>
+    </ul>
+
+    <h2>Department Contacts</h2><hr>
+    <p>Here are the contact details for the different departments within Brighter Days Hospital:</p>
+    <ul>
+        <li><strong>Maternal Care:</strong> (123) 456-7891 | maternalcare@afyahospital.ac.ke</li>
+        <li><strong>Pediatric Care:</strong> (123) 456-7892 | pediatriccare@afyahospital.ac.ke</li>
+        <li><strong>Emergency Services:</strong> (123) 456-7893 | emergency@afyahospital.ac.ke</li>
+        <li><strong>Billing Department:</strong> (123) 456-7894 | billing@afyahospital.ac.ke</li>
+    </ul>
+
+    <h2>Contact Form</h2><hr>
+    <p>If you have specific inquiries or would like to request more information, please use the contact form below:</p>
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="department">Select Department:</label>
+        <select id="department" name="department">
+            <option value="general">General Inquiry</option>
+            <option value="maternal">Maternal Care</option>
+            <option value="pediatrics">Pediatric Care</option>
+            <option value="emergency">Emergency Services</option>
+            <option value="billing">Billing</option>
+        </select><br>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+         <button class="button mt-3" type="submit">Send Message</button>
+    </form>
+</div>
+
+<footer>
+  <p>&copy; Mutinda Stacey Nduku || SCS3/145886/2023</p>
+</footer>
+
+
 </body>
 </html>

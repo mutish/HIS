@@ -1,0 +1,129 @@
+/* Center the form and style it as a card */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9fbe7; /* Light background */
+}
+
+/* Form Layout */
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    max-width: 500px;
+    width: 100%;
+    background-color: #ffffff; /* White card background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+#form-header{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #2e7d32; /* Primary green */
+}
+/* Labels and Inputs */
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #1b5e20; /* Dark green text */
+}
+
+input, select, textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #a5d6a7; /* Soft border */
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+/* Buttons */
+button {
+    padding: 10px;
+    width: 48%; /* Adjust button width for better alignment */
+    background-color: #66bb6a; /* Green background */
+    color: white;
+    border: none; 
+    border-radius: 30px; /* Increase border-radius for rounded buttons */
+    cursor: pointer;
+    margin: 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+/* Buttons inside the card */
+form .row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+table th {
+    background-color: #2e7d32; /* Primary green */
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #c8e6c9; /* Light green line */
+}
+
+/* Zebra striping */
+table tr:nth-child(even) {
+    background-color: #f1f8e9; /* Very light green */
+}
+
+table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+table tr:hover {
+    background-color: #e8f5e9; /* Hover soft green */
+}
+
+/* Responsive Table */
+@media screen and (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+/* Error message style */
+.error-message {
+    color: #d32f2f; /* Strong red for errors */
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+
+/* Valid input */
+input:valid {
+    border: 2px solid #66bb6a; /* Soft green */
+}
+
+/* Invalid input (will be overridden via JS for better control) */
+input.invalid {
+    border: 2px solid #d32f2f; /* Red border */
+    background-color: #ffebee; /* Light red background */
+}
+
+input.valid {
+    border: 2px solid #66bb6a; /* Green border */
+    background-color: #e8f5e9; /* Light green background */
+}

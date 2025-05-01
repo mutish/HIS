@@ -1,0 +1,73 @@
+/* Styles for Contact Page */
+body {
+    background-color: #f1f8e9; /* Very light green background */
+    font-family: Arial, sans-serif;
+    color: #1b5e20; /* Dark green text */
+}
+
+h1 {
+    color: #2e7d32; /* Primary green */
+    font-size: 2.5em;
+    text-align: center;
+}
+
+h2 {
+    color: #388e3c; /* Darker green */
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+
+p {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+/* Form styling */
+form {
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #a5d6a7; /* Soft green border */
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+/* Button styling */
+button {
+    background-color: #66bb6a; /* Accent green */
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #1b5e20;
+    border-radius: 999px; /* Fully rounded buttons */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}

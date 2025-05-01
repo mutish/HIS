@@ -2,9 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Next of Kin Registration ~ Afya Hospital</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/registration.css">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-$END$
+  <header>
+    <h1>Afya Hospital</h1>
+    <p>Your health, Our priority</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../html/index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Register</a>
+        <ul class="dropdown-menu">
+          <li><a href="../html/register_patient.html">Patient</a></li>
+          <li><a href="../html/register_kin.html">Next of Kin</a></li>
+          <li><a href="../html/register_doctor.html">Doctor</a></li>
+          <li><a href="../html/wards.html">New Ward</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Records</a>
+        <ul class="dropdown-menu">
+          <li><a href="../php/patient_records.php">Patient</a></li>
+          <li><a href="../php/kin_records.php">Next of Kin</a></li>
+          <li><a href="../php/doctor_records.php">Doctor</a></li>
+          <li><a href="../php/ward_records.php">Wards</a></li>
+        </ul>
+      </li>
+      <li><a href="../html/about.html">About us</a></li>
+      <li><a href="../html/contacts.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  <!--Form-->
+  <div class="container">
+    <form action="../php/register_kin.php" method="POST" class="needs-validation" id="kinRegistrationForm" novalidate>
+      <legend id="form-header">Next-of-kin Form</legend>
+        <label for="patientid">Patient ID</label>
+        <input type="number" name="patientid" id="firstname" placeholder="Enter Patient ID" required>
+        <div class="invalid-feedback" id="first-feedback"></div><br>
+
+        <label for="kinfirstname">First Name</label>
+        <input type="text" name="firstName" id="kinfirstname" placeholder="Enter first name" required>
+        <div class="invalid-feedback" id="kinfirstname-feedback"></div><br>
+
+        <label for="kinlastname">Last Name</label>
+        <input type="text" name="lastName" id="kinlastname" placeholder="Enter last name" required>
+        <div class="invalid-feedback" id="kinlastname-feedback"></div><br>
+        
+        <label for="kinrelationship">Relationship</label>
+        <input type="text" name="relationship" id="kinrelationship" placeholder="Enter relationship" required>
+        <div class="invalid-feedback" id="kin-feedback"></div><br>
+
+        <label for="kinemail">Email</label>
+        <input type="email" name="email" id="kinemail" placeholder="Enter email" required>
+        <div class="invalid-feedback" id="email-feedback"></div><br>
+
+        <label for="kincontact">Contact</label>
+        <input type="text" name="contact" id="kincontact" placeholder="Enter contact" required>
+        <div class="invalid-feedback" id="contact-feedback"></div><br>
+        
+        <div class="row align-items-center">
+            <div class="col-6">
+                <button class="button" type="submit" id="formSubmit">Register</button>
+            </div>
+            <div class="col-6">
+                <button class="button" type="reset" id="formReset">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<footer>
+  <p>&copy; Mutinda Stacey Nduku || SCS3/145886/2023</p>
+</footer>
+<script src="../js/counties.js"></script>
 </body>
 </html>

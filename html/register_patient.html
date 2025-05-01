@@ -2,9 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Patient Registration ~ Afya Hospital</title>
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/registration.css">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-$END$
+  <header>
+    <h1>Afya Hospital</h1>
+    <p>Your health, Our priority</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../html/index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Register</a>
+        <ul class="dropdown-menu">
+          <li><a href="../html/register_patient.html">Patient</a></li>
+          <li><a href="../html/register_kin.html">Next of Kin</a></li>
+          <li><a href="../html/register_doctor.html">Doctor</a></li>
+          <li><a href="../html/wards.html">New Ward</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Records</a>
+        <ul class="dropdown-menu">
+          <li><a href="../php/patient_records.php">Patient</a></li>
+          <li><a href="../php/kin_records.php">Next of Kin</a></li>
+          <li><a href="../php/doctor_records.php">Doctor</a></li>
+          <li><a href="../php/ward_records.php">Wards</a></li>
+        </ul>
+      </li>
+      <li><a href="../html/about.html">About us</a></li>
+      <li><a href="../html/contacts.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+
+  <!--Form-->
+  <div class="container">
+    <form action="../php/register_patient.php" method="POST" class="needs-validation" id="patientRegistrationForm" novalidate>
+      <legend id="form-header">Patient Registration</legend>
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstname" id="firstname" placeholder="Enter first name" required>
+        <div class="invalid-feedback" id="first-feedback"></div><br>
+
+        <label for="lastname">Last Name</label>
+        <input type="text" name="lastname" id="lastname" placeholder="Enter last name" required>
+        <div class="invalid-feedback" id="lastname-feedback"></div><br>
+
+        <label for="surname">Surname</label>
+        <input type="text" name="surname" id="surname" placeholder="Enter surname" required>
+        <div class="invalid-feedback" id="surname-feedback"></div><br>
+        
+        <label for="phone">Contact</label>
+        <input type="tel" name="phone" id="phone" placeholder="Enter contact" required>
+        <div class="invalid-feedback" id="contact-feedback"></div><br>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter email" required>
+        <div class="invalid-feedback" id="email-feedback"></div><br>
+
+        <label for="dobInput">Date of birth</label>
+        <input type="date" name="dob" id="dobInput" placeholder="Enter date of birth" required>
+        <div class="invalid-feedback" id="dobValidation"></div><br>
+        
+        <label for="genderInput">Gender</label>
+        <select name="gender" id="genderInput" required>
+            <option value="">Select gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Bi-sexual">Bi-sexual</option>
+        </select>
+        <div class="invalid-feedback" id="genderValidation"></div><br>
+
+        <label for="countyInput">County</label>
+        <select name="county" id="countyInput" required>
+            <option value="">Select county</option>
+            <!-- Options will be populated dynamically -->
+        </select>  
+        <div class="invalid-feedback" id="countyValidation"></div><br>
+
+        <label for="ward">Ward</label>
+        <input type="number" name="ward" id="ward" placeholder="Enter ward number" required>
+        <div class="invalid-feedback" id="ward-feedback"></div><br>
+
+        <label for="doctor">Doctor</label>
+        <input type="number" name="doctor" id="doctor" placeholder="Enter doctor number" required>
+        <div class="invalid-feedback" id="doctor-feedback"></div><br>
+        
+        <div class="row align-items-center">
+            <div class="col-6">
+                <button class="button" type="submit" id="formSubmit">Register</button>
+            </div>
+            <div class="col-6">
+                <button class="button" type="reset" id="formReset">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<footer>
+  <p>&copy; Mutinda Stacey Nduku || SCS3/145886/2023</p>
+</footer>
+<script src="../js/counties.js"></script>
+
+
 </body>
 </html>
