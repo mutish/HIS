@@ -9,7 +9,7 @@
         $capacity = clean_data($_POST['capacity']);
         $department = clean_data($_POST['department']);
 
-        $insert_query = "INSERT INTO patients (ward_name, capacity ,department) VALUES (:ward_name, :capacity, :department)";
+        $insert_query = "INSERT INTO wards (ward_name, capacity ,department) VALUES (:ward_name, :capacity, :department)";
         
         $stmt = $pdo->prepare($insert_query);
         

@@ -1,12 +1,14 @@
 <?php
+$host = 'localhost';
+$db   = 'hospital';
+$user = 'postgres';
+$pass = 'Isaiah60:22';
+$dsn = "pgsql:host=$host;dbname=$db";
+
 try {
-    $pdo = new PDO("odbc:hospital");
-
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $pdo = new PDO($dsn, $user, $pass, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+    echo "Connected successfully";
 } catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
+    die("Connection failed: " . $e->getMessage());
 }
 ?>
-

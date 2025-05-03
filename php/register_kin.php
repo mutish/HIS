@@ -12,7 +12,7 @@
 				$phone = clean_data($_POST["phone"]);
 
 				$sql = "INSERT INTO next_of_kin (patient_id, first_name, last_name, relationship, phone, email)
-				VALUES (:patient_id, :first_name, :last_name, relationship, :phone, :email)";
+                VALUES (:patient_id, :first_name, :last_name, :relationship, :phone, :email)";
 	
 				$stmt = $pdo->prepare($sql);
 	
