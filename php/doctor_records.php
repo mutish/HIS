@@ -7,8 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor records ~ Afya Hospital</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
  <!--Site header-->
@@ -48,22 +48,18 @@
 		<table class="table table-hover table-bordered">
 			<thead>
 				<tr>
-					<th></th>
-					<th>Name</th>
-					<th>Specialty</th>
-					<th>Phone</th>
+					<th>#</th>
+					<th>Doctor ID</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Specialization</th>
 					<th>Email</th>
-                    <th>Patient count</th>
+					<th>Phone Number</th>
 				</tr>
 			</thead>
 			<tbody>
 				<?php
-					$select_sql = "SELECT CONCAT(doctors.first_name, ' ' , doctors.last_name) AS name, doctors.specialty, doctors.phone, doctors.email,
-                                     COUNT(patients.doctor_id) AS patients 
-                                     FROM doctors 
-                                     LEFT JOIN patients ON patients.doctor_id = doctors.doctor_id 
-                                     GROUP BY doctors.doctor_id, name, doctors.specialty, doctors.phone, doctors.email";
-
+					$select_sql = "SELECT doctor_id, first_name, last_name, specialization, email, phone_number FROM doctors";
 					$select_stmt = $pdo->prepare($select_sql);
 
 					$select_stmt->execute();
@@ -73,11 +69,12 @@
 					foreach($doctors as $index => $doctor){
 						echo "<tr>";
 						echo "<td>".($index + 1)."</td>";
-						echo "<td>".$doctor['name']."</td>";
-						echo "<td>".$doctor['specialty']."</td>";
-						echo "<td>".$doctor['phone']."</td>";
+						echo "<td>".$doctor['doctor_id']."</td>";
+						echo "<td>".$doctor['first_name']."</td>";
+						echo "<td>".$doctor['last_name']."</td>";
+						echo "<td>".$doctor['specialization']."</td>";
 						echo "<td>".$doctor['email']."</td>";
-						echo "<td>".$doctor['patients']."</td>";
+						echo "<td>".$doctor['phone_number']."</td>";
 						echo "</tr>";
 					}
 				?>

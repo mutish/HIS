@@ -13,7 +13,7 @@
 </head>
 <body>
  <!--Site header-->
-    <  <header>
+  <header>
     <h1>Afya Hospital</h1>
     <p>Your health, Our priority</p>
   </header>
@@ -48,37 +48,34 @@
 		<h1>Patient Records</h1><hr>
 		<table class="table table-hover table-bordered">
 			<thead>
-				<tr>
-					<th></th>
-					<th>Name</th>
-					<th>Date of Birth</th>
-					<th>Email</th>
-					<th>Phone</th>
-					<th>Ward</th>
-					<th>Admitted on</th>
-				</tr>
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>County</th>
+    </tr>
 			</thead>
 			<tbody>
 				<?php
-					$select_sql = "SELECT patient_id, CONCAT(first_name, ' ', middle_name, ' ', last_name) AS name, date_of_birth, county, ward, assigned_doctor FROM patients";
-					$select_stmt = $pdo->prepare($select_sql);
+					$select_sql = "SELECT patient_id, first_name, middle_name, last_name, date_of_birth, age, gender, county FROM patients";
+$select_stmt = $pdo->prepare($select_sql);
+$select_stmt->execute();
+$patients = $select_stmt->fetchAll(PDO::FETCH_ASSOC);
 
-					$select_stmt->execute();
-
-					$patients = $select_stmt->fetchAll(PDO::FETCH_ASSOC);
-
-					foreach($patients as $index => $patient){
-						$dob = date("d/m/Y",strtotime($patient['date_of_birth']));
-
-						echo "<tr>";
-						echo "<td>".($index + 1)."</td>";
-						echo "<td>".$patient['name']."</td>";
-						echo "<td>".$dob."</td>";
-						echo "<td>".$patient['county']."</td>";
-						echo "<td>".$patient['ward']."</td>";
-						echo "<td>".$patient['assigned_doctor']."</td>";
-						echo "</tr>";
-					}
+foreach($patients as $index => $patient){
+    $dob = date("d/m/Y",strtotime($patient['date_of_birth']));
+    $name = $patient['first_name'] . ' ' . $patient['middle_name'] . ' ' . $patient['last_name'];
+    echo "<tr>";
+    echo "<td>".($index + 1)."</td>";
+    echo "<td>".$name."</td>";
+    echo "<td>".$dob."</td>";
+    echo "<td>".$patient['age']."</td>";
+    echo "<td>".$patient['gender']."</td>";
+    echo "<td>".$patient['county']."</td>";
+    echo "</tr>";
+}
 				?>
 			</tbody>
 		</table>

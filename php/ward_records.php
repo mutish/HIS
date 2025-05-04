@@ -7,8 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HIS</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
  <!--Site header-->
@@ -48,20 +48,16 @@
 		<table class="table table-hover table-bordered">
 			<thead>
 				<tr>
-					<th></th>
-					<th>Name</th>
-					<th>Department</th>
+					<th>#</th>
+					<th>Ward ID</th>
+					<th>Ward Name</th>
 					<th>Capacity</th>
-					<th>Patients</th>
+					<th>Department</th>
 				</tr>
 			</thead>
 			<tbody>
 				<?php
-					$select_sql = "SELECT wards.ward_name, wards.department, wards.capacity, 
-                                    COUNT(patients.ward_id) AS patients 
-                                    FROM wards 
-                                    LEFT JOIN patients ON patients.ward_id = wards.ward_id 
-                                    GROUP BY wards.ward_name, wards.department, wards.capacity;";
+					$select_sql = "SELECT ward_id, ward_name, capacity, department FROM wards";
 					$select_stmt = $pdo->prepare($select_sql);
 
 					$select_stmt->execute();
@@ -71,10 +67,10 @@
 					foreach($wards as $index => $ward){
 						echo "<tr>";
 						echo "<td>".($index + 1)."</td>";
+						echo "<td>".$ward['ward_id']."</td>";
 						echo "<td>".$ward['ward_name']."</td>";
-						echo "<td>".$ward['department']."</td>";
 						echo "<td>".$ward['capacity']."</td>";
-						echo "<td>".$ward['patients']."</td>";
+						echo "<td>".$ward['department']."</td>";
 						echo "</tr>";
 					}
 				?>

@@ -7,8 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kin records</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     
    
 </head>
@@ -60,11 +60,7 @@
 			</thead>
 			<tbody>
 				<?php
-					$select_sql = "SELECT
-								CONCAT(patients.first_name, ' ', patients.last_name, ' ', patients.surname) AS patient_name, 
-								CONCAT(next_of_kin.first_name, ' ' , next_of_kin.last_name) as next_of_kin_name, next_of_kin.relationship, next_of_kin.phone, next_of_kin.email 
-								FROM next_of_kin 
-									INNER JOIN patients ON patients.patient_id = next_of_kin.patient_id;";
+					$select_sql = "SELECT * FROM next_of_kin";
 					$select_stmt = $pdo->prepare($select_sql);
 
 					$select_stmt->execute();

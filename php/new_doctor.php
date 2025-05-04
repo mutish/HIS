@@ -31,6 +31,6 @@
         echo $error->getMessage();
     }
 
-    header("Location: http://localhost/HIS/php/doctor_records.php"); 
+    header("Location: /php/doctor_records.php"); 
 	exit;
 ?>

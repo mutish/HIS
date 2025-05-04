@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", async function(){
       const counties = await data.json();
   
       let selectTag = document.getElementById("county");
+      
   
       counties.forEach(county => {
           let option = document.createElement("option");

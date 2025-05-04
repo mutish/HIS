@@ -29,7 +29,7 @@
 			echo $error->getMessage();
 		}
 
-		header("Location: http://localhost/HIS/php/records.php"); 
+		header("Location: /php/kin_records.php"); 
 		exit;
 ?>
    

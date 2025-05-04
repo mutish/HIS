@@ -27,6 +27,6 @@
         echo $error->getMessage();
     }
 
-    header("Location: http://localhost/HIS/php/ward_records.php"); 
+    header("Location:/php/ward_records.php"); 
 	exit;
 ?>
